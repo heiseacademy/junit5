@@ -8,7 +8,7 @@
     <artifactId>04-migration-to-junit5</artifactId>
     <version>1.0.0-SNAPSHOT</version>
 
-    <name>04 - Autmatisierte Migration nach JUnit5</name>
+    <name>04 - Automatisierte Migration nach JUnit5</name>
 
 
     <properties>
