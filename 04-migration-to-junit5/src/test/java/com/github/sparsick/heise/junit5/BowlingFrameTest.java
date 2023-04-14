@@ -1,17 +1,17 @@
 package com.github.sparsick.heise.junit5;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  *
  *
  */
-public class BowlingFrameTest {
+class BowlingFrameTest {
 
     @Test
-    public void totalSum_failToKnockAll() {
+    void totalSum_failToKnockAll() {
         BowlingFrame frameUnderTest = new BowlingFrame();
         frameUnderTest.roll("1");
         frameUnderTest.roll("1");
@@ -22,7 +22,7 @@ public class BowlingFrameTest {
     }
 
     @Test
-    public void totalSum_secondFailToKnockAll() {
+    void totalSum_secondFailToKnockAll() {
         BowlingFrame frameUnderTest = new BowlingFrame();
         frameUnderTest.roll("2");
         frameUnderTest.roll("2");
@@ -33,7 +33,7 @@ public class BowlingFrameTest {
     }
 
     @Test
-    public void totalSum_failToKnockAllWithAMissAsFirstRoll() {
+    void totalSum_failToKnockAllWithAMissAsFirstRoll() {
         BowlingFrame frameUnderTest = new BowlingFrame();
         frameUnderTest.roll("-");
         frameUnderTest.roll("1");
@@ -44,7 +44,7 @@ public class BowlingFrameTest {
     }
 
     @Test
-    public void totalSum_failToKnockAllWithTwoMissedRoll() {
+    void totalSum_failToKnockAllWithTwoMissedRoll() {
         BowlingFrame frameUnderTest = new BowlingFrame();
         frameUnderTest.roll("-");
         frameUnderTest.roll("-");
@@ -55,7 +55,7 @@ public class BowlingFrameTest {
     }
 
     @Test
-    public void totalSum_strike() {
+    void totalSum_strike() {
         BowlingFrame nextBowlingFrame = new BowlingFrame();
         nextBowlingFrame.roll("1");
         nextBowlingFrame.roll("1");
@@ -69,7 +69,7 @@ public class BowlingFrameTest {
     }
 
     @Test
-    public void totalSum_twoStrike() {
+    void totalSum_twoStrike() {
         BowlingFrame lastBowlingFrame = new BowlingFrame();
         lastBowlingFrame.roll("1");
         lastBowlingFrame.roll("1");
@@ -86,7 +86,7 @@ public class BowlingFrameTest {
     }
 
     @Test
-    public void totalSum_spare() {
+    void totalSum_spare() {
         BowlingFrame nextBowlingFrame = new BowlingFrame();
         nextBowlingFrame.roll("1");
         nextBowlingFrame.roll("1");
