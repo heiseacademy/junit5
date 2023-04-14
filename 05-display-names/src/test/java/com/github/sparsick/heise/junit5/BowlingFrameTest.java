@@ -1,5 +1,6 @@
 package com.github.sparsick.heise.junit5;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -8,9 +9,11 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  *
  *
  */
+@DisplayName("Bowling Frame testen")
 class BowlingFrameTest {
 
     @Test
+    @DisplayName("Berechne die Summe obwohl nicht alle Pins umgefallen sind")
     void totalSum_failToKnockAll() {
         BowlingFrame frameUnderTest = new BowlingFrame();
         frameUnderTest.roll("1");

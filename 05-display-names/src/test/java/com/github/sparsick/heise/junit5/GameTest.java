@@ -1,5 +1,7 @@
 package com.github.sparsick.heise.junit5;
 
+import org.junit.jupiter.api.DisplayNameGeneration;
+import org.junit.jupiter.api.DisplayNameGenerator;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -8,10 +10,11 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  *
  *
  */
+@DisplayNameGeneration(DisplayNameGenerator.ReplaceUnderscores.class)
 class GameTest {
 
     @Test
-    void roll_twelveStrikes() {
+    void roll_twelve_strikes() {
         Game gameUnderTest = new Game();
 
         int totalSum = gameUnderTest.roll("XXXXXXXXXXXX");
